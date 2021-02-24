@@ -1,0 +1,38 @@
+.header {
+  height: 100%;
+  display: flex;
+  padding: 0 20px;
+  justify-content: space-between;
+  align-items: center;
+  // background: url('../../assets/imgs/line1.png') no-repeat bottom center;
+  .left {
+    font-size: 26px;
+    .timeIcon {
+      margin-right: 8px;
+      color: #0bbcfa;
+    }
+  }
+  .center {
+    display: flex;
+    align-items: baseline;
+    // background: url('../../assets/imgs/line2.png') no-repeat bottom center;
+    .leftTitle{
+      font-size: 18px;
+    }
+    .mainTitle{
+      font-size: 34px;
+      margin: 0 10px;
+    }
+    .rightTitle{
+
+    }
+  }
+  .right {
+    .desc {
+      color: #77fbe3;
+      .setIcon {
+        margin-right: 8px;
+      }
+    }
+  }
+}

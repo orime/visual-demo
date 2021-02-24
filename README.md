@@ -1,46 +1,58 @@
-# Getting Started with Create React App
+# DataV-React的测试项目
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 概念
+1. 数据可视化作用
+   1. 目的：借助图形化手段，清晰有效地传达与沟通信息
+   2. 作用：把冰冷的数字转化为图形，揭示蕴含在数据中的规律和道理
 
-## Available Scripts
+## 环境搭建
+```bash
+yarn create react-app datav-react-test --template typescript
+# 下面这样不能创建TS项目
+yarn create react-app datav-react-test --template typescript
+```
 
-In the project directory, you can run:
+### 设置别名 alias
+- 装包
+```bash
+yarn add react-app-rewired customize-cra -D
+```
+- 根目录下创建`config-voerrides.js`并写入
+```js
+const { override, addWebpackAlias } = require('customize-cra')
+const path = require('path')
+ 
+module.exports = override(
+  // 配置路径别名
+  addWebpackAlias({
+    "@": path.resolve(__dirname, 'src')
+  })
+)
+```
+- 根目录下创建`paths.json`并写入
+```json
 
-### `yarn start`
+{
+  "compilerOptions": {
+    "baseUrl": "src",
+    "paths": {
+      "@/*": ["*"]
+    }
+  }
+}
+```
+- tsconfig.json中修改
+```json
+{
+  ...
+  "extends": "./paths.json"
+}
+```
+### 支持scss（module）
+- 直接新建scss文件即可，记得文件取名为`xxx.module.scss`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### 支持svg icon
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## 工具
 
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+- [可视化生成 grid 网格布局](https://cssgrid-generator.netlify.app/)

@@ -1,0 +1,60 @@
+$font-color: #c8994a;
+
+@mixin item {
+  display: flex;
+  padding: 15px 15px;
+  text-align: left;
+  // height: 50px;
+  // line-height: 50px;
+  position: relative;
+  &::after{
+    position: absolute;
+    bottom: 0;
+    content: '';
+    width: 209px;
+    height: 1px;
+    background-color: rgba(37, 76, 119, 100);
+  }
+}
+
+
+.wrap {
+  display: flex;
+  justify-content: space-between;
+  .itemWrap {
+    background-color: #162e54;
+    width: 240px;
+    height: 272px;
+    border-radius: 6px;
+    .title {
+      height: 39px;
+      background-color: #254c77;
+      line-height: 39px;
+      border-radius: 6px 6px 0 0;
+      padding: 0 15px;
+      display: flex;
+      justify-content: space-between;
+      .count {
+        color: $font-color;
+      }
+    }
+    .subTitle {
+      @include item;
+    }
+    .body{
+      @include item;
+    }
+    .name {
+      flex: 1;
+    }
+    .distance {
+      width: 45px;
+      margin: 0 5px;
+    }
+    .value {
+      width: 45px;
+      color: $font-color;
+      text-align: center;
+    }
+  }
+}

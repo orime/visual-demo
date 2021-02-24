@@ -1,0 +1,14 @@
+@import '../../pages/Home/index.module.scss';
+
+.card {
+  padding: 20px;
+  .title {
+    background: linear-gradient(to right, #184f7d, $bg-item-color);
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    height: 30px;
+    line-height: 30px;
+    margin: 0px 0 10px;
+  }
+}

@@ -1,0 +1,67 @@
+$bg-color: #051b3c; //也可以$bg-color: #ed795a !default;这样写 !default 表示是默认值
+$bg-item-color: #082543;
+
+.homeBox {
+  width: 100%;
+  min-width: 1920px;
+  height: 100%;
+  min-height: 1080px;
+  font-size: 14px;
+  color: #fff;
+  background: rgba(5,27,60,1);
+  z-index: 88;
+
+  // display: grid;
+  // grid-template-columns: repeat(3, 1fr);
+  // grid-template-rows: repeat(6, 1fr);
+  // grid-column-gap: 8px;
+  // grid-row-gap: 8px;
+
+  // display: flex;
+
+  .header,
+  .left,
+  .centerUp,
+  .centerDown,
+  .right {
+    // overflow: hidden;
+    background: rgba(8,37,67, 1);
+    // background: $bg-item-color;
+    // margin: 10px;
+  }
+
+  .header {
+    height: 98px;
+  }
+  .subHeader {
+    height: 46px;
+    font-size: 30px;
+    line-height: 46px;
+    background: linear-gradient(to right, $bg-color, #365f93, $bg-color);
+    margin: 20px 0;
+  }
+  .body {
+    display: flex;
+    justify-content: space-evenly;
+    height: 100%;
+    .left {
+      width: 528px;
+      height: 100%;
+    }
+    .center {
+      width: 770px;
+      .centerUp {
+        width: 100%;
+        height: 520px;
+      }
+      .centerDown {
+        width: 100%;
+        height: 364px;
+      }
+    }
+    .right {
+      width: 528px;
+      height: 100%;
+    }
+  }
+}

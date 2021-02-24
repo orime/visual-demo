@@ -1,0 +1,47 @@
+.titleWrap {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 22px;
+  .titleItem {
+    color: #fff;
+    font-size: 14px;
+    width: 136px;
+    height: 22px;
+    text-align: center;
+    line-height: 22px;
+    background: linear-gradient(to right, #162f50, #36649f 50%, #162f50);
+    // background: linear-gradient(0deg, blue, green 40%, red);
+    // background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+  }
+}
+.bodyWrap {
+  .bodyItem {
+    background-color: rgba(14, 49, 82, 100);
+    display: flex;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid rgba(37, 73, 115, 100);
+    font-size: 13px;
+    text-align: left;
+    .name {
+      color: rgba(79, 140, 197, 100);
+
+      width: 28%;
+    }
+    .category {
+      width: 28%;
+    }
+    .investment {
+      width: 29%;
+    }
+    .operation {
+      width: 48px;
+      height: 24px;
+      line-height: 24px;
+      border-radius: 20px;
+      background-color: #0e3152;
+      text-align: center;
+      border: 2px solid rgba(78, 140, 196, 100);
+    }
+  }
+}
