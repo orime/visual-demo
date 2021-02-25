@@ -13,46 +13,6 @@ const titleComp = () => {
 }
 
 const RightInfo = () => {
-  const options: EChartsOption = useMemo(() => {
-    return ({
-      title: {
-        // text: '基础雷达图',
-        textStyle: {
-          color: '#fff'
-        }
-      },
-      tooltip: {},
-      legend: {
-        show:true,
-        data: ['投资分析'],
-        textStyle: {
-          color: '#fff'
-        },
-        left: 20,
-        bottom: 20,
-      },
-      radar: {
-        // shape: 'circle',
-        indicator: [
-          { name: '配套服务 77.63', max: 100 },
-          { name: '生态环境 77.63', max: 100 },
-          { name: '产业聚集 77.63', max: 100 },
-          { name: '经济实力 77.63', max: 100 },
-        ],
-        radius: 88,
-      },
-      series: [{
-        type: 'radar',
-        areaStyle: {},
-        data: [
-          {
-            value: [77.63, 77.63, 77.63, 77.63],
-            name: '投资分析'
-          }
-        ],
-      }]
-    })
-  }, [])
   const data = [
     {name: '金峰乡锦湖村集体物业楼', category: '村集体控制物业', investment: '出租 合作'},
     {name: '蒋岭上自然村', category: '魅力乡村 美丽集镇', investment: ''},

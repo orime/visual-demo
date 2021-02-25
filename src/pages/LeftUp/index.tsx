@@ -53,7 +53,7 @@ const RightInfo = () => {
               color: 'rgba(208, 217, 99, 100)',
             }
           },
-          formatter: '{a|{value}}'
+          formatter: '{value}'
         }
       },
       series: [{

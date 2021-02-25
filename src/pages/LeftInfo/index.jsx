@@ -42,7 +42,7 @@ export default class Index extends PureComponent {
     const channelData = calculate(channel);
 
     return (
-      <Card title="投资分析" legends={<Labels data={Object.values(legends)} />}>
+      <Card title="测试页面" legends={<Labels data={Object.values(legends)} />}>
         <Pie data={equipmentData} style={{ height: 240 }} />
         <div className={styles.channel}>
           <div className={styles.title}>总得分：318.39</div>
